@@ -4,5 +4,7 @@ from . import views
 
 urlpatterns = [
     path('', views.homeview, name = "home"),
-    path('weather/', views.weatherview, name = "weather")
 ]
+
+handler404 = 'weatherapp.views.error_404_view'
+handler404 = 'weatherapp.views.error_500'

@@ -13,8 +13,11 @@ def homeview(request) :
         context = result
         return render(request, 'weather.html', context = context)
 
-    return render(request, 'homepage.html')
+    return render(request, 'homepage.html' )
 
 
-def weatherview(request) :
-    return render(request, 'weather.html', {})
+def error_404_view(request, exception):
+    return render(request, '404.html')
+
+def error_500(request, exception):
+    return render(request, 'error_500.html', status=500)
